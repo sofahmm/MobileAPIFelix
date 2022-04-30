@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAPIFelix.Views.EntriePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Название API:"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding API}"
+                       WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Описание:"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding Description}"
+                       WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Авторизация:"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding Auth}"
+                       WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Протокол хттпс"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding HTTPS}"
+                       x:Name="HttpsEntry"
+                       WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Кора:"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding Cors}"
+                       WidthRequest="300"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Ссылка:"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{Binding Link}"
+                       TextColor="DarkSeaGreen"
+                       FontSize="20">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Категория:"
+                       HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding Category}"
+                       WidthRequest="300"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

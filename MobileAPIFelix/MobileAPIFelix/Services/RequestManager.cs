@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using MobileAPIFelix.Model;
@@ -13,7 +14,7 @@ namespace MobileAPIFelix.Services
         {
             restService = service;
         }
-        public Task<List<EntrieModel>> GetEntrieModels()
+        public Task<ObservableCollection<EntrieModel>> GetEntrieModels()
         {
             return restService.GetDataAsync();
         }

@@ -1,6 +1,7 @@
 ﻿using MobileAPIFelix.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text.Json;
@@ -18,7 +19,7 @@ namespace MobileAPIFelix.Services
             client = new HttpClient();
         }
 
-        public async Task<List<EntrieModel>> GetDataAsync()
+        public async Task<ObservableCollection<EntrieModel>> GetDataAsync()
         {
             Uri uri = new Uri(string.Format(Constants.RestUrl, string.Empty));
             try
